@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Placar from './components/Placar';
+import JogoDaVelha from './components/JogoDaVelha';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Placar x={10} o={10} />
+      <Text style={styles.text}>Vez: Jogador 1</Text>
+      <JogoDaVelha />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +17,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#0dbdf6',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly'
   },
+  text: {
+    color: "#fff",
+    fontSize: 30
+  }
 });
